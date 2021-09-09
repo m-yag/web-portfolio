@@ -21,7 +21,7 @@ export default {
     </h1>
 
     <SidebarLink to="/" icon="fas fa-user">Page 1</SidebarLink>
-    <SidebarLink to="/temp" icon="fas fa-code">Page 2</SidebarLink>
+    <SidebarLink to="/projects" icon="fas fa-code">Projects</SidebarLink>
 
     <span
       class="collapse-icon"
@@ -37,14 +37,14 @@ export default {
 :root {
   --sidebar-bg-color: #05080D;
   --sidebar-active: #262828;
-  --sidebar-hover: #AACFD1;
+  --sidebar-hover: #B35900;
 }
 </style>
 
 <style scoped>
 .sidebar {
   color: white;
-  background-color: var(--sidebar-bg-color);
+  background-color: var(--nav-light);
 
   float: left;
   position: fixed;

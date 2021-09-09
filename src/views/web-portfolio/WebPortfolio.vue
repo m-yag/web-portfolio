@@ -1,0 +1,19 @@
+<template>
+  <div class="container mt-5">
+    <div class="row">
+      <h1 class="text-center">Web Portfolio</h1>
+    </div>
+    <div class="row mt-5">
+      <Tabmenu to_code="#" to_journal="#"></Tabmenu>
+      <router-view />
+    </div>
+  </div>
+</template>
+
+<script>
+import Tabmenu from '@/components/tabmenu/Tabmenu'
+
+export default {
+  components: {Tabmenu}
+}
+</script>

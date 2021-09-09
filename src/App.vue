@@ -1,13 +1,3 @@
-<script>
-import Sidebar from '@/components/sidebar/Sidebar'
-import { sidebarWidth } from '@/components/sidebar/state'
-export default {
-  components: { Sidebar },
-  setup() {
-    return { sidebarWidth }
-  }
-}
-</script>
 <template>
   <Sidebar />
   <div :style="{ 'margin-left': sidebarWidth }">
@@ -15,13 +5,33 @@ export default {
   </div>
 </template>
 
+<script>
+import Sidebar from '@/components/sidebar/Sidebar'
+import { sidebarWidth } from '@/components/sidebar/state'
+
+export default {
+  components: { Sidebar },
+  setup() {
+    return { sidebarWidth }
+  }
+}
+</script>
+
 <style>
+:root {
+  --bg-light: #F5F5F5;
+  --fg-light: #000000;
+  --btn-light: #464646;
+  --nav-light: #191919;
+  --orange: #B35900;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Courier New', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+
+  color: var(--fg-light);
 }
 
 #nav {
@@ -30,10 +40,10 @@ export default {
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+/*  color: #2c3e50; */
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+/*  color: #42b983; */
 }
 </style>

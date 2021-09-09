@@ -8,9 +8,20 @@ const routes = [
     component: Home
   },
   {
-    path: '/temp',
-    name: 'Temp',
-    component: ()=>import('../views/Temp.vue')
+    path: '/projects',
+    name: 'Projects',
+    component: ()=>import('../views/Projects.vue')
+  },
+  {
+    path: '/web-portfolio',
+    name: 'Web Portfolio',
+    component: ()=>import('../views/web-portfolio/WebPortfolio.vue'),
+    children: [
+      {
+        path: '/web-portfolio/code',
+        component: ()=>import('../views/web-portfolio/Code.vue')
+      }
+    ]
   }
 ]
 
