@@ -10,7 +10,7 @@
     <div class="row">
       <ul>
         <li>
-          <router-link to="/web-portfolio">Web Portfolio</router-link>
+          <router-link to="/web-portfolio/code">Web Portfolio</router-link>
         </li>
       </ul>
     </div>

@@ -20,6 +20,10 @@ const routes = [
       {
         path: '/web-portfolio/code',
         component: ()=>import('../views/web-portfolio/Code.vue')
+      },
+      {
+        path: '/web-portfolio/journal',
+        component: ()=>import('../views/web-portfolio/Journal.vue')
       }
     ]
   }
