@@ -1,5 +1,7 @@
 <template>
-  <h2>Code</h2>
+  <div class="container mt-5">
+      <p>Not yet available. Working on it!</p>
+  </div>
 </template>
 
 <script>

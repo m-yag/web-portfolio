@@ -4,7 +4,7 @@
       <h1 class="text-center">Web Portfolio</h1>
     </div>
     <div class="row mt-5">
-      <Tabmenu to_code="#" to_journal="#"></Tabmenu>
+      <Tabmenu to_code="/web-portfolio/code" to_journal="#"></Tabmenu>
       <router-view />
     </div>
   </div>

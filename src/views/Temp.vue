@@ -1,12 +1,7 @@
 <template>
-  <h1>Temp</h1>
+  <p>Placeholder</p>
 </template>
 
 <script>
-export default {
-  name: 'Temp'
-}
+export default {}
 </script>
-
-<style scoped>
-</style>

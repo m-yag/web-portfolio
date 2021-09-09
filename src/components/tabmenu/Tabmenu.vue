@@ -35,7 +35,13 @@ export default {
   background-color: var(--btn-light);
 }
 
-.slanted-left:focus:active {
+.slanted-left:focus {
+  -webkit-clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%, 0 24%);
+  clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%, 0 24%);
+  background-color: #b35900;
+}
+
+.slanted-left:active {
   -webkit-clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%, 0 24%);
   clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%, 0 24%);
   background-color: #b35900;
@@ -45,7 +51,13 @@ export default {
   background-color: var(--btn-light);
 }
 
-.slanted-right:focus:active {
+.slanted-right:focus {
+  -webkit-clip-path: polygon(92% 0, 100% 24%, 100% 100%, 0 100%, 0 0%);
+  clip-path: polygon(92% 0, 100% 24%, 100% 100%, 0 100%, 0 0%);
+  background-color: var(--orange);
+}
+
+.slanted-right:active {
   -webkit-clip-path: polygon(92% 0, 100% 24%, 100% 100%, 0 100%, 0 0%);
   clip-path: polygon(92% 0, 100% 24%, 100% 100%, 0 100%, 0 0%);
   background-color: var(--orange);
