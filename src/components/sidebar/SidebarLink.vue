@@ -69,19 +69,19 @@ export default {
 .link-bottom:hover::before {
   bottom: -2px;
   left: -2px;
-  border-bottom: 2px solid var(--sidebar-hover);
-  border-left: 2px solid var(--sidebar-hover);
+  border-bottom: 2px solid var(--orange);
+  border-left: 2px solid var(--orange);
 }
 
 .link-bottom:hover::after {
   bottom: -2px;
   right: -2px;
-  border-bottom: 2px solid var(--sidebar-hover);
-  border-right: 2px solid var(--sidebar-hover);
+  border-bottom: 2px solid var(--orange);
+  border-right: 2px solid var(--orange);
 }
 
 .link.active {
-  background-color: var(--sidebar-active);
+  background-color: var(--btn-light);
 }
 
 .link .icon {

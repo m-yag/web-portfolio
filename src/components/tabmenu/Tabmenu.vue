@@ -1,12 +1,12 @@
 <template>
 
 <div class="container">
-  <div class="row justify-content-center">
-    <router-link :to="to_code" class="col-sm-2 slanted-left text-white" :class="{current: isCodeActive}">
-      <h2 class="text-center text-white">Code</h2>
+  <div class="row justify-content-center" style="border-bottom: solid var(--btn-light)">
+    <router-link :to="to_code" class="col-sm-2 slanted-left text-white routerlink" :class="{current: isCodeActive}">
+      <h2 class="text-center link-bottom">Code</h2>
     </router-link>
-    <router-link :to="to_journal" class="col-sm-2 slanted-right text-white" :class="{current: isJournalActive}">
-      <h2 class="text-center">Journal</h2>
+    <router-link :to="to_journal" class="col-sm-2 slanted-right text-white routerlink" :class="{current: isJournalActive}">
+      <h2 class="text-center link-bottom">Journal</h2>
     </router-link>
   </div>
 </div>
@@ -30,14 +30,6 @@ export default {
   }
 }
 </script>
-
-<style>
-:root {
-  --sidebar-bg-color: #05080D;
-  --sidebar-active: #262828;
-  --sidebar-hover: #b35900;
-}
-</style>
 
 <style scoped>
 .slanted-left {
@@ -63,4 +55,13 @@ export default {
 .current {
   background-color: #b35900;
 }
+
+.routerlink {
+  text-decoration: none;
+}
+
+.link-bottom {
+  position: relative;
+}
+
 </style>

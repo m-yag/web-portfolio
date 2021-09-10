@@ -26,6 +26,30 @@ export default {
   --orange: #B35900;
 }
 
+.link-bottom:hover::before,
+.link-bottom:hover::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: transparent;
+  transition: 1s;
+}
+
+.link-bottom:hover::before {
+  bottom: -2px;
+  left: -2px;
+  border-bottom: 2px solid var(--orange);
+  border-left: 2px solid var(--orange);
+}
+
+.link-bottom:hover::after {
+  bottom: -2px;
+  right: -2px;
+  border-bottom: 2px solid var(--orange);
+  border-right: 2px solid var(--orange);
+}
+
 #app {
   font-family: 'Courier New', monospace;
   -webkit-font-smoothing: antialiased;

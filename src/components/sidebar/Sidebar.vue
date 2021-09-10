@@ -33,14 +33,6 @@ export default {
   </div>
 </template>
 
-<style>
-:root {
-  --sidebar-bg-color: #05080D;
-  --sidebar-active: #262828;
-  --sidebar-hover: #B35900;
-}
-</style>
-
 <style scoped>
 .sidebar {
   color: white;
