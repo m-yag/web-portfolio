@@ -7,8 +7,11 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 import '@fortawesome/fontawesome-free/js/all'
 
+import Particles from 'particles.vue3'
+
 // createApp(App).mount('#app')
 
 const app = createApp(App)
 app.use(router)
+app.use(Particles)
 app.mount('#app')
