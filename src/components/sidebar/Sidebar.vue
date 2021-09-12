@@ -20,8 +20,10 @@ export default {
       <span v-else>Yagmour</span>
     </h1>
 
-    <SidebarLink to="/" icon="fas fa-user">Page 1</SidebarLink>
+    <SidebarLink to="/" icon="fas fa-home">Home</SidebarLink>
     <SidebarLink to="/projects" icon="fas fa-code">Projects</SidebarLink>
+    <hr>
+    <SidebarLink to="/about" icon="fas fa-user">About</SidebarLink>
 
     <span
       class="collapse-icon"
