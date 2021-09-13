@@ -1,13 +1,6 @@
 import { ref, computed } from 'vue'
 
-export const collapsed = ref(computed(()=> {
-  if(window.matchMedia("(min-width: 1215px)").matches) {
-    return false
-  } else {
-    return true
-  }
-}))
-
+export const collapsed = ref(false)
 export const toggleSidebar = () => (collapsed.value = !collapsed.value)
 
 export const SIDEBAR_WIDTH = 180

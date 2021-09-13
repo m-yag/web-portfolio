@@ -6,6 +6,11 @@ export default {
   props: {},
   components: { SidebarLink },
   setup() {
+    if(window.matchMedia("(min-width: 960px)").matches) {
+      collapsed.value = false
+    } else {
+      collapsed.value = true
+    }
     return { collapsed, toggleSidebar, sidebarWidth }
   }
 }
