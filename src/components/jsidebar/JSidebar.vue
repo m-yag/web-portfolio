@@ -9,8 +9,10 @@
       <i class="fas fa-angle-double-left" />
     </span>
 
-    <div v-for="link in links" :key="link.entry">
-      <JSidebarLink :to="link.path">{{link.entry}}</JSidebarLink>
+    <div v-if="!collapsed">
+      <div v-for="link in links" :key="link.entry">
+        <JSidebarLink :to="link.path">{{link.entry}}</JSidebarLink>
+      </div>
     </div>
   </div>
 </template>
