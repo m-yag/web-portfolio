@@ -30,6 +30,16 @@ export default {
 
 <style scoped>
 
+.container {
+  min-height: 250px;
+
+  border-right: 1px solid var(--btn-light);
+  border-left: 1px solid var(--btn-light);
+  border-bottom: 1px solid var(--btn-light);
+}
+
+
+/* To be erased */
 .nav {
   float: left;
   z-index: 1;
@@ -39,7 +49,6 @@ export default {
   flex-direction: column;
 
   position: relative;
-  border-right: solid 1px;
 }
 
 .test {

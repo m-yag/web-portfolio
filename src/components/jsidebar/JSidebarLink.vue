@@ -27,10 +27,17 @@ export default {
   display: flex;
   align-items: center;
   position: relative;
+  width: 88%;
 
   cursor: pointer;
 
   color: black;
   text-decoration: none;
+  font-weight: 600;
 }
+
+.router-link-active {
+  color: var(--orange);
+}
+
 </style>

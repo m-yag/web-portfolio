@@ -43,6 +43,9 @@ export default {
 
   display: flex;
   flex-direction: column;
+  height: 100%;
+  min-height: 250px;
+  margin-bottom: 5px;
 }
 
 .collapse-icon {
