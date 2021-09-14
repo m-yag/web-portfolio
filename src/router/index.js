@@ -28,7 +28,13 @@ const routes = [
       },
       {
         path: '/web-portfolio/journal',
-        component: ()=>import('../views/web-portfolio/Journal.vue')
+        component: ()=>import('../views/web-portfolio/Journal.vue'),
+        children: [
+          {
+            path: '/web-portfolio/journal/test',
+            component: ()=>import('../views/web-portfolio/journal/Test.vue')
+          }
+        ]
       }
     ]
   }
