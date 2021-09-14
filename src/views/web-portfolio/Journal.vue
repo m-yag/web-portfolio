@@ -3,13 +3,12 @@
     <div class="row">
       <div class="col-1">
         <JSidebar :links="[
-          {entry: '12-12-12', path: '/web-portfolio/journal/test'},
-          {entry: '11-11-11', path: '#'}
+          {entry: '12-12-12', path: '/web-portfolio/journal/test'}
         ]"/>
       </div>
       <div class="col mt-5">
         <div :style="{'margin-left': sidebarWidth}" style="float: left">
-          <router-view/>
+          <router-view><Markdown :source="source" /></router-view>
         </div>
       </div>
     </div>
@@ -20,10 +19,19 @@
 import JSidebar from '@/components/jsidebar/JSidebar'
 import {sidebarWidth} from '@/components/jsidebar/state'
 
+import Markdown from 'vue3-markdown-it'
+
+import Test from 'raw-loader!./journal/Test.md'
+
 export default {
-  components: {JSidebar},
+  components: {JSidebar, Markdown},
   setup() {
     return {sidebarWidth, JSidebar}
+  },
+  data() {
+    return {
+      source: Test
+    }
   }
 }
 </script>
