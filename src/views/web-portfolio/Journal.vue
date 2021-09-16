@@ -8,8 +8,8 @@ import Journal from '@/components/journal/Journal'
 const data = {
   journal: [
     {
-      entry: 'test',
-      path: '/web-portfolio/journal/test'
+      entry: '21-09-16',
+      path: '/web-portfolio/journal/21-09-16'
     }
   ]
 }

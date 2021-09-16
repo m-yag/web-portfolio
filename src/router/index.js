@@ -31,8 +31,8 @@ const routes = [
         component: ()=>import('../views/web-portfolio/Journal.vue'),
         children: [
           {
-            path: '/web-portfolio/journal/test',
-            component: ()=>import('../views/web-portfolio/journal/Test.vue')
+            path: '/web-portfolio/journal/21-09-16',
+            component: ()=>import('../views/web-portfolio/journal/21-09-16.vue')
           }
         ]
       }

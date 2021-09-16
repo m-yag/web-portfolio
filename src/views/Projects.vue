@@ -3,16 +3,18 @@
     <div class="row mb-5">
       <h1 class="text-center">Current Projects</h1>
     </div>
-
     <div class="row">
-      <p>List of all 'active' coding projects.</p>
+      <p>List of all 'active' coding projects:</p>
     </div>
     <div class="row">
-      <ul>
-        <li>
-          <router-link to="/web-portfolio/code">Web Portfolio</router-link>
-        </li>
-      </ul>
+      <div class="col">
+        <ul>
+          <li>
+            <router-link to="/web-portfolio/code">web-portfolio</router-link>
+          </li>
+          <p>A single-page application built with Vue and used to display my portfolio online (i.e., this website).</p>
+        </ul>
+      </div>
     </div>
 
   </div>
