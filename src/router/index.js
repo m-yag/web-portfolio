@@ -29,6 +29,7 @@ const routes = [
       {
         path: '/web-portfolio/journal',
         component: ()=>import('../views/web-portfolio/Journal.vue'),
+        redirect: '/web-portfolio/journal/21-09-16',
         children: [
           {
             path: '/web-portfolio/journal/21-09-16',
