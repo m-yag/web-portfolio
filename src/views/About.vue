@@ -12,6 +12,20 @@
       <div class="col-sm-4">
         <p class="mt-5">My name is Moe Yagmour. I'm a recent CS graduate searching for the next chapter of my learning journey.</p>
         <p> I'm the type of person who loves to plan, and loves to execute those plans even more.</p>
+
+        <div class="row align-items-center justify-content-center mt-4">
+          <div class="col-3">
+            <a href="https://linkedin.com/in/yagmour">
+              <img src="../assets/linkedin-icon.svg" style="width:60px" />
+            </a>
+          </div>
+          <div class="col-3">
+            <a href="https://github.com/m-yag">
+              <img src="../assets/github-icon.svg" style="width:30px" />
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -63,7 +77,7 @@
     <hr class="mt-5" />
 
     <div class="row justify-content-center mt-5 mb-5">
-      <h2 class="text-center">Background Info</h2>
+      <h2 class="text-center">Education</h2>
     </div>
 
     <div class="row justify-content-center">
@@ -71,11 +85,12 @@
 
         <span><strong>2014-2020: University of Windsor</strong></span>
         <ul>
-          <li>Majored in Computer Science with an academic minor in German. During this period, I worked primarily with <strong>Java</strong> and <strong>C</strong>.</li>
-          <li>Notable courses include: Algorithms, Data Structures, Database Management Systems, Systems Programming, and Artifical Intelligence.</li>
+          <li>Majored in Computer Science with a 3.0 GPA.</li>
+          <li>Minored in German.</li>          
+          <li>Notable courses include: Algorithms (<strong>C</strong>), Data Structures(<strong>Java</strong>), Database Management Systems (<strong>SQL</strong>), Systems Programming (<strong>C</strong>), OOP (<strong>C++</strong>), and Artifical Intelligence.</li>
         </ul>
 
-        <span><strong>2009-2013: Flight Academy / ERAU - Aeronautics</strong></span>
+        <span><strong>2010-2013: Flight Academy / ERAU - Aeronautics</strong></span>
         <ul>
           <li>Successfully completed Pilot License (PPL/IR).</li>
           <li>Attended Embry-Riddle's Aeronautics Associate Program.</li>
