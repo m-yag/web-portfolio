@@ -64,6 +64,16 @@ export default {
   font-weight: bold;
 }
 
+// Any screen smaller than 960px loads with sidebar collapsed.
+// This rule ensures that any screen smaller than 769px does not squeeze the
+// the content of the element selected. Since the position is fixed, the
+// sidebar will simply 'overlap' the content when expanded.
+@media (max-width:769px) {
+  .fixed {
+    position: absolute;
+    left: 18%;
+  }
+}
 
 #app {
   font-family: 'Courier New', monospace;

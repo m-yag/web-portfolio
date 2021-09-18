@@ -1,4 +1,5 @@
 <template>
+  <div class="fixed">
   <div class="container mt-5">
     <div class="row mb-5">
       <h1 class="text-center">Current Projects</h1>
@@ -17,6 +18,7 @@
       </div>
     </div>
 
+  </div>
   </div>
 </template>
 

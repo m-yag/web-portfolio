@@ -11,6 +11,8 @@ declare module "particles.vue3";
     <hr>
     <p class="msg">Welcome to my online portfolio. Have a look around!</p>
   </div>
+
+  <div class="fixed">
   <Particles id="tsparticles"/>
     <Particles
       id="tsparticles"
@@ -93,6 +95,7 @@ declare module "particles.vue3";
         detectRetina: true
       }"
     />
+    </div>
 </template>
 
 
