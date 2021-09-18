@@ -4,12 +4,12 @@ declare module "particles.vue3";
   <div class="title">
     <h1>Moe Yagmour</h1>
     <ul>
-      <li>Programmer</li>
-      <li>Developer</li>
-      <li>Coder</li>
+      <li>B.Sc. Computer Science</li>
+      <li>Aspiring programmer</li>
+      <li>Cool guy</li>
     </ul>
     <hr>
-    <p class="msg">Welcome to my humble web portfolio! The site is still under construction.</p>
+    <p class="msg">Welcome to my online portfolio. Have a look around!</p>
   </div>
   <Particles id="tsparticles"/>
     <Particles
@@ -77,7 +77,7 @@ declare module "particles.vue3";
               enable: true,
               value_area: 800
             },
-            value: 75
+            value: 100
           },
           opacity: {
             value: 0.5

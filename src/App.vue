@@ -35,20 +35,35 @@ export default {
   background: transparent;
   transition: 1s;
 }
-
 .link-bottom:hover::before {
   bottom: -2px;
   left: -2px;
   border-bottom: 2px solid var(--orange);
   border-left: 2px solid var(--orange);
 }
-
 .link-bottom:hover::after {
   bottom: -2px;
   right: -2px;
   border-bottom: 2px solid var(--orange);
   border-right: 2px solid var(--orange);
 }
+
+.routerlink {
+  color: var(--orange);
+}
+.routerlink:hover {
+  color: var(--orange);
+  font-weight: bold;
+}
+
+/* give to Markdown elements for orange links*/
+.md a {
+  color: var(--orange) !important;
+}
+.md a:hover {
+  font-weight: bold;
+}
+
 
 #app {
   font-family: 'Courier New', monospace;

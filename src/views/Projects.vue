@@ -10,7 +10,7 @@
       <div class="col">
         <ul>
           <li>
-            <router-link to="/web-portfolio/code">web-portfolio</router-link>
+            <router-link class="routerlink" to="/web-portfolio/code">web-portfolio</router-link>
           </li>
           <p>A single-page application built with Vue and used to display my portfolio online (i.e., this website).</p>
         </ul>

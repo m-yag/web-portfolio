@@ -1,3 +1,7 @@
+// Special thanks to Justin Brooks for providing the base code for the Sidebar.
+// I've modified it quite a bit, but the original can be found here:
+// https://github.com/codingwithjustin/vue3-sidebar
+
 <script>
 import SidebarLink from './SidebarLink'
 import { collapsed, toggleSidebar, sidebarWidth } from './state'
@@ -6,6 +10,7 @@ export default {
   props: {},
   components: { SidebarLink },
   setup() {
+    // set collapsed default value based on screen size
     if(window.matchMedia("(min-width: 960px)").matches) {
       collapsed.value = false
     } else {

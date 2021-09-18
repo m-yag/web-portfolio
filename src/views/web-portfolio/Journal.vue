@@ -1,5 +1,5 @@
 <template>
-  <Journal :links="journal" />
+  <Journal class="md" :links="journal" />
 </template>
 
 <script>
@@ -21,6 +21,3 @@ export default {
   components: {Journal}
 }
 </script>
-
-<style scoped>
-</style>
