@@ -1,6 +1,20 @@
 <template>
-  <div class="sidebar" :style="{ width: sidebarWidth }">
+  <div v-if="large" class="sidebar" :style="{'width': sidebarWidth}">
+    <span
+      class="collapse-icon mb-3"
+      :class="{ 'rotate-180': collapsed }"
+      @click="toggleSidebar"
+    >
+      <i class="fas fa-angle-double-left" />
+    </span>
 
+    <div v-if="!collapsed">
+      <div v-for="link in links" :key="link.entry">
+        <JSidebarLink :to="link.path">{{link.entry}}</JSidebarLink>
+      </div>
+    </div>
+  </div>
+  <div v-else class="sidebar" :style="{'width': sidebarWidthSmall}">
     <span
       class="collapse-icon mb-3"
       :class="{ 'rotate-180': collapsed }"
@@ -19,23 +33,35 @@
 
 <script>
 import JSidebarLink from './JSidebarLink'
-import { collapsed, toggleSidebar, sidebarWidth } from './state'
+import { collapsed, toggleSidebar, sidebarWidth, sidebarWidthSmall } from './state'
 
 export default {
   props: ['links'],
   components: { JSidebarLink },
+  data() {
+    var large = window.matchMedia("(min-width: 960px)").matches
+    return {large}
+  },
   setup() {
     if(window.matchMedia("(min-width: 960px)").matches) {
       collapsed.value = false
     } else {
+      console.log(sidebarWidth.value)
+      console.log(sidebarWidthSmall.value)
       collapsed.value = true
     }
-    return { collapsed, toggleSidebar, sidebarWidth }
+    return { collapsed, toggleSidebar, sidebarWidth, sidebarWidthSmall }
   }
 }
 </script>
 
 <style scoped>
+@media (max-width:769px) {
+  .sidebarWidth {
+    width: sidebarWidthSmall;
+  }
+}
+
 .sidebar {
   color: black;
 

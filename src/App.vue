@@ -71,7 +71,7 @@ export default {
 @media (max-width:769px) {
   .fixed {
     position: absolute;
-    left: 18%;
+    left: 11%;
   }
 }
 

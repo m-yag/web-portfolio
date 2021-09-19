@@ -1,4 +1,5 @@
 <template>
+  <div class="fixed">
   <div class="container mt-5">
     <div class="row">
       <h1 class="text-center">Web Portfolio</h1>
@@ -7,6 +8,7 @@
       <Tabmenu to_code="/web-portfolio/code" to_journal="/web-portfolio/journal"></Tabmenu>
       <router-view />
     </div>
+  </div>
   </div>
 </template>
 

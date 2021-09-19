@@ -1,5 +1,5 @@
 <template>
-    <Markdown :html="true" :linkify="true" :abbr="true" :source="source" />
+  <Markdown :html="true" :linkify="true" :abbr="true" :source="source" />
 </template>
 
 <script>
