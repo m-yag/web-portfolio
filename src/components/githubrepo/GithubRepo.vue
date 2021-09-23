@@ -86,8 +86,10 @@ export default {
   },
   mounted() {
     fetch(this.repoCommitUrl, {
+      method: 'POST',
+      body: 'grant_type=client_id=' + process.env.CLIENT_ID + '&client_secret=' + process.env.CLIEND_SECRET,
       headers: {
-      }
+        }
     })
       .then(res => res.json())
       .then(data => 
