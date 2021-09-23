@@ -1,9 +1,11 @@
 <template>
-  <div class="container mt-5">
-      <p>Not yet available. Working on it!</p>
-  </div>
+  <GithubRepo repo="web-portfolio" owner="m-yag" />
 </template>
 
 <script>
-export default {}
+import GithubRepo from '@/components/githubrepo/GithubRepo.vue'
+
+export default {
+  components: {GithubRepo}
+}
 </script>
