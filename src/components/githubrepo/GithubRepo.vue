@@ -87,7 +87,7 @@ export default {
   mounted() {
     fetch(this.repoCommitUrl, {
       headers: {
-        Authorization: `token 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`
+        Authorization: `token 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`
       }
     })
       .then(res => res.json())
@@ -96,7 +96,7 @@ export default {
       .catch(err => console.log(err.message)),
     fetch(this.repoCommitUrl, {
       headers: {
-        Authorization: `token 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`
+        Authorization: `token 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`
       }
     })
       .then(res => res.json())
