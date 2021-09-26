@@ -87,6 +87,7 @@ export default {
   mounted() {
     fetch(this.repoCommitUrl, {
       headers: {
+        Authorization: process.env.PAT
         }
     })
       .then(res => res.json())
@@ -95,6 +96,7 @@ export default {
       .catch(err => console.log(err.message)),
     fetch(this.repoCommitUrl, {
       headers: {
+        Authorization: process.env.PAT
       }
     })
       .then(res => res.json())
