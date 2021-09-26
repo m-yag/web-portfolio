@@ -26,7 +26,7 @@
       <div class="col-sm-6 text-end">
         <p><span class="fab fa-github"></span> <span class="md"><a href="#">{{owner}}/{{repo}}</a></span></p>
         <p class="stats">Last commit: <span>{{calcCommitDate()}}</span></p>
-        <p>{{numberOfCommits}} commits</p>
+        <p>{{calcTotalCommits(commitActivity)}} commits</p>
       </div>
 
     </div>
@@ -59,12 +59,21 @@ export default {
       httpsCloneUrl: `https://github.com/${props.owner}/${props.repo}.git`,
       githubCloneCmd: `gh repo clone ${props.owner}/${props.repo}`,
       repoCommitUrl: `https://api.github.com/repos/${props.owner}/${props.repo}/commits`,
+      commitActivityUrl: `https://api.github.com/repos/${props.owner}/${props.repo}/stats/commit_activity`,
       readmeRaw: '',
-      numberOfCommits: [],
+
+      commitActivity: [],
       lastCommit: []
     }
   },
   methods: {
+    calcTotalCommits(commitActivity) {
+      var totalCommits = 0
+      for(var i = 0; i < commitActivity.length; i++) {
+        totalCommits += commitActivity[i].total
+      }
+      return totalCommits
+    },
     calcCommitDate() {
       var date = new Date()
       date = date - this.lastCommit
@@ -87,20 +96,20 @@ export default {
   mounted() {
     fetch(this.repoCommitUrl, {
       headers: {
-        Authorization: process.env.PAT
+        Authorization: process.env.VUE_APP_GITHUB_PAT
         }
     })
       .then(res => res.json())
       .then(data => 
         this.lastCommit = new Date(data[0].commit.author.date))
       .catch(err => console.log(err.message)),
-    fetch(this.repoCommitUrl, {
+    fetch(this.commitActivityUrl, {
       headers: {
-        Authorization: process.env.PAT
+        Authorization: process.env.VUE_APP_GITHUB_PAT
       }
     })
       .then(res => res.json())
-      .then(data => this.numberOfCommits = data.length)
+      .then(data => this.commitActivity = data)
       .catch(err => console.log(err.message))
     fetch(this.readmeUrl, {
       headers: {
