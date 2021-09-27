@@ -24,8 +24,8 @@
       </div>
 
       <div class="col-sm-6 text-end">
-        <p><span class="fab fa-github"></span> <span class="md"><a href="#">{{owner}}/{{repo}}</a></span></p>
-        <p class="stats">Last commit: <span>{{calcCommitDate()}}</span></p>
+        <p><span class="fab fa-github"></span> <span class="md"><a :href="repoUrl">{{owner}}/{{repo}}</a></span></p>
+        <p class="stats">Last commit: <span>{{calcLastCommit()}}</span></p>
         <p>{{calcTotalCommits(commitActivity)}} commits</p>
       </div>
 
@@ -43,6 +43,7 @@
 import Markdown from 'vue3-markdown-it'
 
 export default {
+
   props: {
     repo: {
       type: String,
@@ -53,20 +54,32 @@ export default {
       required: true
     }
   },
+
   data(props) {
     return {
-      readmeUrl: `https://raw.githubusercontent.com/${props.owner}/${props.repo}/master/README.md`,
+      // Project repo url
+      repoUrl: `https://github.com/${props.owner}/${props.repo}`,
+
+      // Git clone relevant strings
       httpsCloneUrl: `https://github.com/${props.owner}/${props.repo}.git`,
       githubCloneCmd: `gh repo clone ${props.owner}/${props.repo}`,
-      repoCommitUrl: `https://api.github.com/repos/${props.owner}/${props.repo}/commits`,
-      commitActivityUrl: `https://api.github.com/repos/${props.owner}/${props.repo}/stats/commit_activity`,
+
+      // Github raw file url
+      readmeUrl: `https://raw.githubusercontent.com/${props.owner}/${props.repo}/master/README.md`,
       readmeRaw: '',
 
+      // Github API urls
+      commitsUrl: `https://api.github.com/repos/${props.owner}/${props.repo}/commits`,
+      commitActivityUrl: `https://api.github.com/repos/${props.owner}/${props.repo}/stats/commit_activity`,
+
+      // Store API data here
       commitActivity: [],
       lastCommit: []
     }
   },
+
   methods: {
+
     calcTotalCommits(commitActivity) {
       var totalCommits = 0
       for(var i = 0; i < commitActivity.length; i++) {
@@ -74,7 +87,9 @@ export default {
       }
       return totalCommits
     },
-    calcCommitDate() {
+
+    // Calculate time since last commit and format output
+    calcLastCommit() {
       var date = new Date()
       date = date - this.lastCommit
       if(date > 86400e3) {
@@ -94,15 +109,17 @@ export default {
     }
   },
   mounted() {
-    fetch(this.repoCommitUrl, {
+    fetch(this.commitsUrl, {
       headers: {
         Authorization: process.env.VUE_APP_GITHUB_PAT
         }
     })
       .then(res => res.json())
-      .then(data => 
+      .then(data =>
+        // convert ISO timestamp to date object and then assign to lastCommit 
         this.lastCommit = new Date(data[0].commit.author.date))
       .catch(err => console.log(err.message)),
+
     fetch(this.commitActivityUrl, {
       headers: {
         Authorization: process.env.VUE_APP_GITHUB_PAT
@@ -111,6 +128,7 @@ export default {
       .then(res => res.json())
       .then(data => this.commitActivity = data)
       .catch(err => console.log(err.message))
+
     fetch(this.readmeUrl, {
       headers: {
       }
@@ -119,9 +137,11 @@ export default {
       .then(data => this.readmeRaw = data)
       .catch(err => console.log(err.message))
   },
+
   components: {Markdown}
 }
 </script>
+
 <style scoped>
 .clone {
   background: none;
