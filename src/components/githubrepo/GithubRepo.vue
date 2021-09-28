@@ -1,7 +1,35 @@
 <template>
   <div class="container mt-5">
-    <div class="row">
 
+    <div class="row d-flex d-lg-none mb-4">
+
+      <p><span class="fab fa-github"></span> <span class="md"><a :href="repoUrl">{{owner}}/{{repo}}</a></span></p>
+      <p class="stats">{{calcTotalCommits(commitActivity)}} commits</p>
+      <p>Last commit: <span>{{calcLastCommit()}}</span></p>
+
+      <nav>
+        <span class="fas fa-terminal"></span> <strong>Clone:</strong>
+        <div class="nav justify-content-start" id="nav-tab" role="tablist">
+          <router-link to="#" class="routerlink active" id="nav-https-tab" data-bs-toggle="tab" data-bs-target="#nav-https" type="button" role="tab" aria-controls="nav-https" aria-selected="true"><strong>HTTPS</strong></router-link>
+          <router-link to="#" class="routerlink" id="nav-cli-tab" data-bs-toggle="tab" data-bs-target="#nav-cli" type="button" role="tab" aria-controls="nav-cli" aria-selected="false"><strong>Github CLI</strong></router-link>
+        </div>
+      </nav>
+
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-https" role="tabpanel" aria-labelledby="nav-https-tab">
+          <input style="width: 249px" type="text" :value="httpsCloneUrl" readonly="readonly">
+          <button class="routerlink clone" style="margin-left: 2px" v-clipboard="httpsCloneUrl"><span class="far fa-clone"></span></button>
+        </div>
+        <div class="tab-pane fade" id="nav-cli" role="tabpanel" aria-labelledby="nav-cli-tab">
+          <input style="width: 249px;" type="text" :value="githubCloneCmd" readonly="readonly" />
+          <button class="routerlink clone" style="margin-left: 2px" v-clipboard="githubCloneCmd"><span class="far fa-clone"></span></button>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="row d-none d-lg-flex">
       <div class="col-sm-6">
         <nav>
           <span class="fas fa-terminal"></span> <strong>Clone:</strong>
@@ -17,7 +45,7 @@
             <button class="routerlink clone" style="margin-left: 2px" v-clipboard="httpsCloneUrl"><span class="far fa-clone"></span></button>
           </div>
           <div class="tab-pane fade" id="nav-cli" role="tabpanel" aria-labelledby="nav-cli-tab">
-            <input style="width: 300px" type="text" :value="githubCloneCmd" readonly="readonly">
+            <input style="width: 300px" type="text" :value="githubCloneCmd" readonly="readonly" />
             <button class="routerlink clone" style="margin-left: 2px" v-clipboard="githubCloneCmd"><span class="far fa-clone"></span></button>
           </div>
         </div>
@@ -97,10 +125,12 @@ export default {
         date > 1 ? date += ' days ago' : date = ' yesterday'
       }
       else if(date > 3600e3) {
-        date = Math.floor(date / 3600e3) + ' hours ago'
+        date = Math.floor(date / 3600e3)
+        date > 1 ? date += ' hours ago' : date += ' hour ago'
       }
       else if(date > 60e3) {
-        date = Math.floor(date / 60e3) + ' minutes ago'
+        date = Math.floor(date / 60e3)
+        date > 1 ? date += ' minutes ago' : date += ' minute ago'
       }
       else {
         date = Math.floor(date / 1e3) + ' seconds ago'
@@ -108,6 +138,7 @@ export default {
       return date
     }
   },
+
   mounted() {
     fetch(this.commitsUrl, {
       headers: {
