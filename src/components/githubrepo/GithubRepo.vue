@@ -9,18 +9,18 @@
 
       <nav>
         <span class="fas fa-terminal"></span> <strong>Clone:</strong>
-        <div class="nav justify-content-start" id="nav-tab" role="tablist">
-          <router-link to="#" class="routerlink active" id="nav-https-tab" data-bs-toggle="tab" data-bs-target="#nav-https" type="button" role="tab" aria-controls="nav-https" aria-selected="true"><strong>HTTPS</strong></router-link>
-          <router-link to="#" class="routerlink" id="nav-cli-tab" data-bs-toggle="tab" data-bs-target="#nav-cli" type="button" role="tab" aria-controls="nav-cli" aria-selected="false"><strong>Github CLI</strong></router-link>
+        <div class="nav justify-content-start" id="nav-tab-mobile" role="tablist">
+          <router-link to="#" class="routerlink active" id="nav-https-tab-mobile" data-bs-toggle="tab" data-bs-target="#nav-https-mobile" type="button" role="tab" aria-controls="nav-https-mobile" aria-selected="true"><strong>HTTPS</strong></router-link>
+          <router-link to="#" class="routerlink" id="nav-cli-tab-mobile" data-bs-toggle="tab" data-bs-target="#nav-cli-mobile" type="button" role="tab" aria-controls="nav-cli-mobile" aria-selected="false"><strong>Github CLI</strong></router-link>
         </div>
       </nav>
 
-      <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="nav-https" role="tabpanel" aria-labelledby="nav-https-tab">
+      <div class="tab-content" id="nav-tabContent-mobile">
+        <div class="tab-pane fade show active" id="nav-https-mobile" role="tabpanel" aria-labelledby="nav-https-tab-mobile">
           <input style="width: 249px" type="text" :value="httpsCloneUrl" readonly="readonly">
           <button class="routerlink clone" style="margin-left: 2px" v-clipboard="httpsCloneUrl"><span class="far fa-clone"></span></button>
         </div>
-        <div class="tab-pane fade" id="nav-cli" role="tabpanel" aria-labelledby="nav-cli-tab">
+        <div class="tab-pane fade" id="nav-cli-mobile" role="tabpanel" aria-labelledby="nav-cli-tab-mobile">
           <input style="width: 249px;" type="text" :value="githubCloneCmd" readonly="readonly" />
           <button class="routerlink clone" style="margin-left: 2px" v-clipboard="githubCloneCmd"><span class="far fa-clone"></span></button>
         </div>

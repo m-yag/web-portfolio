@@ -75,6 +75,10 @@ export default {
   }
 }
 
+.orange {
+  color: var(--orange);
+}
+
 #app {
   font-family: 'Courier New', monospace;
   -webkit-font-smoothing: antialiased;

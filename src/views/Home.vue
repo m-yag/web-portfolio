@@ -1,6 +1,7 @@
 declare module "particles.vue3";
 
 <template>
+
   <div class="title">
     <h1>Moe Yagmour</h1>
     <ul>
@@ -12,8 +13,7 @@ declare module "particles.vue3";
     <p class="msg">Welcome to my online portfolio. Have a look around!</p>
   </div>
 
-  <div class="fixed">
-  <Particles id="tsparticles"/>
+  <Particles class="fixed" id="tsparticles"/>
     <Particles
       id="tsparticles"
       :options="{
@@ -54,7 +54,7 @@ declare module "particles.vue3";
         },
         particles: {
           color: {
-            value: '#000000'
+            value: ['#000000', '#000000', '#000000', '#000000', '#000000', '#b35900']
           },
           links: {
             color: '#000000',
@@ -72,7 +72,7 @@ declare module "particles.vue3";
             outMode: 'bounce',
             random: false,
             speed: 1,
-            straight: false
+            straight: true
           },
           number: {
             density: {
@@ -85,7 +85,7 @@ declare module "particles.vue3";
             value: 0.5
           },
           shape: {
-            type: 'square'
+            type: 'edge'
           },
           size: {
             random: true,
@@ -95,7 +95,6 @@ declare module "particles.vue3";
         detectRetina: true
       }"
     />
-    </div>
 </template>
 
 

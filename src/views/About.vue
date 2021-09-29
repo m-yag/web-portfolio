@@ -17,12 +17,12 @@
         <div class="row align-items-center justify-content-center mt-4">
           <div class="col-3">
             <a href="https://linkedin.com/in/yagmour">
-              <img src="../assets/linkedin-icon.svg" style="width:60px" />
+              <span class="fab fa-linkedin icon-link"></span>
             </a>
           </div>
           <div class="col-3">
             <a href="https://github.com/m-yag">
-              <img src="../assets/github-icon.svg" style="width:30px" />
+              <span class="fab fa-github icon-link"></span>
             </a>
           </div>
         </div>
@@ -118,5 +118,14 @@ img {
 
 .nobullet {
   list-style-type:none;
+}
+
+.icon-link {
+  font-size: 2rem;
+  color: black;
+}
+
+.icon-link:hover {
+  color: var(--orange);
 }
 </style>
