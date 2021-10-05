@@ -5,9 +5,9 @@ declare module "particles.vue3";
   <div class="title">
     <h1>Moe Yagmour</h1>
     <ul>
-      <li>B.Sc. Computer Science</li>
-      <li>Aspiring programmer</li>
-      <li>Cool guy</li>
+      <li>System Analyst</li>
+      <li>Web Developer</li>
+      <li>Programmer</li>
     </ul>
     <hr>
     <p class="msg">Welcome to my online portfolio. Have a look around!</p>
