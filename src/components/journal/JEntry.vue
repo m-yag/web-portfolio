@@ -1,5 +1,5 @@
 <template>
-  <div :style="{'margin-left': sidebarWidth}" style="float: left">
+  <div :style="{'margin-left': sidebarWidth}">
     <router-view></router-view>
   </div>
 </template>
@@ -14,5 +14,3 @@ export default {
   }
 }
 </script>
-
-

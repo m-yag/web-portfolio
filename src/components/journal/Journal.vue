@@ -1,6 +1,20 @@
 <template>
   <div class="container">
-    <div class="row">
+
+    <div class="row d-flex d-sm-none">
+      <div class="col-1">
+        <small>
+          <JSidebar :links="links"/>
+        </small>
+      </div>
+      <div class="col-11 mt-5">
+        <small>
+          <JEntry />
+        </small>
+      </div>
+    </div>
+
+    <div class="row d-none d-sm-flex">
       <div class="col-1">
         <JSidebar :links="links"/>
       </div>
@@ -8,6 +22,7 @@
         <JEntry />
       </div>
     </div>
+
   </div>
 </template>
 
