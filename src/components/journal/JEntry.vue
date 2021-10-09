@@ -1,6 +1,6 @@
 <template>
   <div :style="{'margin-left': sidebarWidth}">
-    <router-view></router-view>
+    <router-view class="md"></router-view>
   </div>
 </template>
 
