@@ -116,7 +116,7 @@ export default {
       return totalCommits
     },
 
-    // Calculate time since last commit and format output
+    // Calculate time since last commit and return sensibly formatted output
     calcLastCommit() {
       var date = new Date()
       date = date - this.lastCommit
