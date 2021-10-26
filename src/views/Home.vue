@@ -2,7 +2,18 @@ declare module "particles.vue3";
 
 <template>
 
-  <div class="title">
+  <div class="title mobile d-block d-md-none">
+    <h1>Moe Yagmour</h1>
+    <ul>
+      <li>System Analyst</li>
+      <li>Web Developer</li>
+      <li>Programmer</li>
+    </ul>
+    <hr>
+    <p class="msg">Welcome to my online portfolio. Have a look around!</p>
+  </div>
+
+  <div class="title d-none d-md-block">
     <h1>Moe Yagmour</h1>
     <ul>
       <li>System Analyst</li>
@@ -115,12 +126,16 @@ export default {
 
 .title {
   top: 15px;
-  left: 15%;
+  left: 19%;
   position: fixed;
   background: #fff;
   padding: 0 12px 6px 12px;
   border: 1px dashed #000;
   max-width: 300px;
+}
+
+.title.mobile {
+  left: 12%
 }
 
 .msg {
