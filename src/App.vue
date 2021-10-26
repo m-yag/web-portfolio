@@ -79,6 +79,10 @@ export default {
   color: var(--orange);
 }
 
+li {
+  list-style-type: square;
+}
+
 #app {
   font-family: 'Courier New', monospace;
   -webkit-font-smoothing: antialiased;

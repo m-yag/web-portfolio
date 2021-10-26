@@ -7,10 +7,10 @@
     </div>
 
     <div class="row justify-content-center">
-      <div class="col-sm-4">
-        <img src="../assets/me.jpg" />
+      <div class="col-md-4">
+        <img class="mt-2" src="../assets/me.jpg" />
       </div>
-      <div class="col-sm-4">
+      <div class="col-md-4">
         <p class="mt-5">My name is Moe Yagmour. I am an experienced IT professional currently searching for the next chapter of my learning journey.</p>
         <p>I'm the type of person who loves to plan, and loves to execute those plans even more.</p>
 
