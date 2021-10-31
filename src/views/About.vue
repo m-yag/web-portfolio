@@ -130,28 +130,10 @@
       <div class="col-md-9">
         <ul>
           <li>Successfully completed Pilot License (PPL/IR).</li>
-          <li>Attend Embry-Riddle's Aeronautics Associate Program.</li>
-        </ul>
-      </div>
-    </div>
-
-<!--
-    <div class="col-9">
-      <div class="row">
-        <div class="col-1 col-md-6"><strong>University of Windsor</strong></div>
-        <div class="col-1 col-md-6 text-end"><strong>2014-2019</strong></div>
-        <ul>
-          <li>Minored in German.</li>
-        </ul>
-
-        <span><strong>2010-2013: Flight Academy / ERAU - Aeronautics</strong></span>
-        <ul>
-          <li>Successfully completed Pilot License (PPL/IR).</li>
           <li>Attended Embry-Riddle's Aeronautics Associate Program.</li>
         </ul>
       </div>
     </div>
--->
 
   </div>
   </div>
