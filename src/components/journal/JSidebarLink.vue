@@ -37,7 +37,7 @@ export default {
 }
 
 .router-link-active {
-  color: var(--orange);
+  color: var(--primary);
 }
 
 </style>

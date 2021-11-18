@@ -19,46 +19,33 @@ export default {
 
 <style>
 :root {
-  --bg-light: #F5F5F5;
+  --bg-light: #FFFFFF;
   --fg-light: #000000;
   --btn-light: #464646;
-  --nav-light: #191919;
-  --orange: #B35900;
+  --primary: #2C6E49;
 }
 
-.link-bottom:hover::before,
-.link-bottom:hover::after {
-  content: '';
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  background: transparent;
-  transition: 1s;
+html,
+body,
+template {
+  background-color: var(--bg-light);
 }
-.link-bottom:hover::before {
-  bottom: -2px;
-  left: -2px;
-  border-bottom: 2px solid var(--orange);
-  border-left: 2px solid var(--orange);
-}
-.link-bottom:hover::after {
-  bottom: -2px;
-  right: -2px;
-  border-bottom: 2px solid var(--orange);
-  border-right: 2px solid var(--orange);
+
+.container {
+  background-color: var(--bg-light);
 }
 
 .routerlink {
-  color: var(--orange);
+  color: var(--primary);
 }
 .routerlink:hover {
-  color: var(--orange);
+  color: var(--primary);
   font-weight: bold;
 }
 
 /* give to Markdown elements for orange links*/
 .md a {
-  color: var(--orange) !important;
+  color: var(--primary) !important;
 }
 .md a:hover {
   font-weight: bold;
@@ -72,22 +59,20 @@ export default {
   .fixed {
     position: absolute;
     left: 11%;
+    background-color: var(--bg-light);
   }
+}
+
+.fixed {
+  background-color: var(--bg-light);
 }
 
 .orange {
   color: var(--orange);
 }
 
-li {
-  list-style-type: square;
-}
-
 #app {
-  font-family: 'Courier New', monospace;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
+/* Place fonts here */
   color: var(--fg-light);
 }
 
@@ -98,9 +83,5 @@ li {
 #nav a {
   font-weight: bold;
 /*  color: #2c3e50; */
-}
-
-#nav a.router-link-exact-active {
-/*  color: #42b983; */
 }
 </style>

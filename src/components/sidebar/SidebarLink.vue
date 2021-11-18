@@ -1,3 +1,14 @@
+<template>
+  <router-link :to="to" class="link link-bottom" :class="{ active: isActive }">
+    <i class="icon" :class="icon" />
+    <transition name="fade">
+      <span v-if="!collapsed">
+        <slot/>
+      </span>
+    </transition>
+  </router-link>
+</template>
+
 <script>
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
@@ -15,17 +26,6 @@ export default {
   }
 }
 </script>
-
-<template>
-  <router-link :to="to" class="link link-bottom" :class="{ active: isActive }">
-    <i class="icon" :class="icon" />
-    <transition name="fade">
-      <span v-if="!collapsed">
-        <slot/>
-      </span>
-    </transition>
-  </router-link>
-</template>
 
 <style scoped>
 .fade-enter-active,
@@ -57,7 +57,8 @@ export default {
 }
 
 .link.active {
-  background-color: var(--btn-light);
+  filter: brightness(0.95);
+  backdrop-filter: brightness(0.85);
 }
 
 .link .icon {

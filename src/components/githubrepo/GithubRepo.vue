@@ -191,12 +191,12 @@ export default {
 }
 
 .routerlink:hover {
-  color: var(--orange);
+  color: var(--primary);
   font-weight: bold;
 }
 
 .routerlink.active {
-  color: var(--orange);
+  color: var(--primary);
   font-weight: bold;
 }
 

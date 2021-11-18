@@ -29,15 +29,15 @@ const routes = [
       {
         path: '/web-portfolio/journal',
         component: ()=>import('../views/web-portfolio/Journal.vue'),
-        redirect: '/web-portfolio/journal/21-10-09',
+        redirect: '/web-portfolio/journal/entry2',
         children: [
           {
-            path: '/web-portfolio/journal/21-10-09',
-            component: ()=>import('../views/web-portfolio/journal/21-10-09.vue')
+            path: '/web-portfolio/journal/entry2',
+            component: ()=>import('../views/web-portfolio/journal/entry2.vue')
           },
           {
-            path: '/web-portfolio/journal/21-09-16',
-            component: ()=>import('../views/web-portfolio/journal/21-09-16.vue')
+            path: '/web-portfolio/journal/entry1',
+            component: ()=>import('../views/web-portfolio/journal/entry1.vue')
           }
         ]
       }

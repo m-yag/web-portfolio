@@ -4,7 +4,7 @@
 
 <script>
 import Markdown from 'vue3-markdown-it'
-import entry from './test.md'
+import entry from './entry2.md'
 export default {
   data() {return {source: entry}},
   components: {Markdown}

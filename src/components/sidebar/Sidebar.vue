@@ -1,35 +1,18 @@
 // Special thanks to Justin Brooks for providing the base code for the Sidebar.
-// I've modified it quite a bit, but the original can be found here:
+// I've modified it, but the original can be found here:
 // https://github.com/codingwithjustin/vue3-sidebar
-
-<script>
-import SidebarLink from './SidebarLink'
-import { collapsed, toggleSidebar, sidebarWidth } from './state'
-
-export default {
-  props: {},
-  components: { SidebarLink },
-  setup() {
-    // set collapsed default value based on screen size
-    if(window.matchMedia("(min-width: 960px)").matches) {
-      collapsed.value = false
-    } else {
-      collapsed.value = true
-    }
-    return { collapsed, toggleSidebar, sidebarWidth }
-  }
-}
-</script>
 
 <template>
   <div class="sidebar" :style="{ width: sidebarWidth }">
-    <h1>
+    <h1 class="text-center">
       <span v-if="collapsed">
-        <div>Y</div>
+        <div>J</div>
+        <div>S</div>
       </span>
-      <span v-else>Yagmour</span>
+      <span v-else>Jane Smith</span>
     </h1>
 
+    <!-- Menu links go here. -->
     <SidebarLink to="/" icon="fas fa-home">Home</SidebarLink>
     <SidebarLink to="/projects" icon="fas fa-code">Projects</SidebarLink>
     <hr>
@@ -45,10 +28,32 @@ export default {
   </div>
 </template>
 
+<script>
+import SidebarLink from './SidebarLink'
+import { collapsed, toggleSidebar, sidebarWidth } from './state'
+
+export default {
+  components: { SidebarLink },
+  setup() {
+    setMaxCollapseWidth(960);
+    return { collapsed, toggleSidebar, sidebarWidth }
+  }
+}
+
+// Set maximum width at which sidebar will collapse on load.
+const setMaxCollapseWidth = function(width) {
+  if(window.matchMedia(`(min-width: ${width}px)`).matches) {
+    collapsed.value = false
+  } else {
+    collapsed.value = true
+  }
+}
+</script>
+
 <style scoped>
 .sidebar {
-  color: white;
-  background-color: var(--nav-light);
+  color: var(--bg-light);
+  background-color: var(--primary);
 
   float: left;
   position: fixed;
